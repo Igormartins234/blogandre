@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um olhar aprofundado sobre a vida, obra e arte do premiado escritor e ilustrador brasileiro André Neves, um mestre da literatura infantojuvenil.">
+    <meta name="keywords" content="André Neves, Literatura Infantil, Ilustração, Livros Infantis, Autor Brasileiro, Obax, Tom, A Caligrafia de Dona Sofia">
+    <title>André Neves: A Poesia em Cores e Palavras na Literatura Infantil</title>
+    
+    <!-- Inclusão do Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Biblioteca AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Biblioteca Typed.js para efeitos de digitação -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Biblioteca Particles.js para efeito de partículas -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Biblioteca GSAP para animações avançadas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Configuração customizada do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Crimson Text', 'Georgia', 'serif'],
+                        'display': ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            '50': '#f0f9ff',
+                            '100': '#e0f2fe',
+                            '200': '#bae6fd',
+                            '300': '#7dd3fc',
+                            '400': '#38bdf8',
+                            '500': '#0ea5e9',
+                            '600': '#0284c7',
+                            '700': '#0369a1',
+                            '800': '#075985',
+                            '900': '#0c4a6e',
+                        },
+                        'secondary': {
+                            '50': '#faf5ff',
+                            '100': '#f3e8ff',
+                            '200': '#e9d5ff',
+                            '300': '#d8b4fe',
+                            '400': '#c084fc',
+                            '500': '#a855f7',
+                            '600': '#9333ea',
+                            '700': '#7c3aed',
+                            '800': '#6b21a8',
+                            '900': '#581c87',
+                        },
+                        'accent': {
+                            '50': '#ecfdf5',
+                            '100': '#d1fae5',
+                            '200': '#a7f3d0',
+                            '300': '#6ee7b7',
+                            '400': '#34d399',
+                            '500': '#10b981',
+                            '600': '#059669',
+                            '700': '#047857',
+                            '800': '#065f46',
+                            '900': '#064e3b',
+                        },
+                        'neutral': {
+                            '50': '#fafafa',
+                            '100': '#f5f5f5',
+                            '200': '#e5e5e5',
+                            '300': '#d4d4d4',
+                            '400': '#a3a3a3',
+                            '500': '#737373',
+                            '600': '#525252',
+                            '700': '#404040',
+                            '800': '#262626',
+                            '900': '#171717',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Efeito de partículas */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .book-cover {
+            transition: transform 0.5s ease;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-cover:hover {
+            transform: rotateY(5deg) scale(1.03);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e0f2fe;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 2rem;
+            bottom: -1rem;
+            width: 2px;
+            background: linear-gradient(to bottom, #e0f2fe, #f3e8ff);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d4d4d4, transparent);
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #f1f5f9;
+        }
+        
+        .quote-decoration {
+            position: relative;
+        }
+        
+        .quote-decoration::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 5rem;
+            color: #e0f2fe;
+            font-family: Georgia, serif;
+            z-index: 0;
+        }
+        
+        /* Efeito de brilho nos botões */
+        .glow-on-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glow-on-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .glow-on-hover:hover::before {
+            left: 100%;
+        }
+        
+        /* Animação de entrada para elementos */
+        .fade-in-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Efeito parallax */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-50 font-serif text-neutral-700 leading-relaxed antialiased">
+
+    <!-- Header/Navegação -->
+    <header class="sticky top-0 z-50 gradient-bg text-neutral-800 shadow-lg glass-effect" data-aos="fade-down">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center animate-pulse">
+                        <i class="fas fa-book-open text-primary-600 text-sm"></i>
+                    </div>
+                    <h1 class="text-xl md:text-2xl font-bold font-sans">Literatura Infantojuvenil</h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#biografia" class="hover:text-accent-300 transition-colors duration-300 font-medium relative group">
+                        <span class="relative z-10">Biografia</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-300 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#obras" class="hover:text-accent-300 transition-colors duration-300 font-medium relative group">
+                        <span class="relative z-10">Obras</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-300 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#premios" class="hover:text-accent-300 transition-colors duration-300 font-medium relative group">
+                        <span class="relative z-10">Prêmios</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-300 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#legado" class="hover:text-accent-300 transition-colors duration-300 font-medium relative group">
+                        <span class="relative z-10">Legado</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-300 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+                
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section com partículas -->
+    <section class="relative py-20 md:py-28 hero-gradient overflow-hidden">
+        <div id="particles-js"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-72 h-72 bg-primary-300 rounded-full -translate-x-1/2 -translate-y-1/2 animate-float"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-300 rounded-full translate-x-1/3 translate-y-1/3 animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right" data-aos-delay="200">
+                    <div class="inline-block mb-4">
+                        <span class="bg-primary-100 text-primary-700 text-sm font-sans font-medium px-3 py-1 rounded-full animate-pulse">Autor e Ilustrador Brasileiro</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-neutral-800 mb-6 leading-tight">
+                        <span id="typed-text"></span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl font-sans" data-aos="fade-up" data-aos-delay="400">
+                        Descubra o universo lúdico e sensível de um dos maiores nomes da literatura infantojuvenil brasileira.
+                    </p>
+                    <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#biografia" class="bg-primary-600 hover:bg-primary-700 text-white font-sans font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center glow-on-hover">
+                            <i class="fas fa-user mr-2"></i> Explorar Biografia
+                        </a>
+                        <a href="#obras" class="bg-white hover:bg-neutral-50 text-neutral-800 font-sans font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-neutral-200 shadow-lg hover:shadow-xl flex items-center">
+                            <i class="fas fa-book mr-2"></i> Ver Obras
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="800">
+                    <div class="relative">
+                        <!-- Foto de André Neves -->
+                        <div class="w-72 h-96 md:w-80 md:h-[28rem] rounded-2xl shadow-2xl transform rotate-2 overflow-hidden book-cover">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/A.neves_2016.jpg/960px-A.neves_2016.jpg?20170514154751" 
+                                 alt="André Neves, escritor e ilustrador brasileiro" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-5 rounded-xl shadow-xl max-w-xs border border-neutral-100" data-aos="zoom-in" data-aos-delay="1000">
+                            <div class="flex text-amber-400 mb-2">
+                                <i class="fas fa-quote-left text-primary-200 mr-2"></i>
+                            </div>
+                            <p class="text-sm text-neutral-600 italic">"Sou pura imagem, risco e rabisco. Só sei ser assim. Como se a alma ilustração fosse."</p>
+                            <p class="text-right text-xs font-sans font-semibold text-neutral-800 mt-3">- André Neves</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container Principal do Conteúdo -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            
+            <!-- Biografia -->
+            <section id="biografia" class="p-8 sm:p-10 md:p-16">
+                <div class="flex items-center mb-12" data-aos="fade-up">
+                    <div class="h-1 w-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mr-4"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-neutral-800">O Início de um Sonho entre Tintas e Letras</h2>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="lg:w-2/3">
+                        <p class="mb-6 text-lg text-neutral-700 leading-relaxed" data-aos="fade-right">Mergulhar na obra de <strong class="text-primary-600 font-semibold">André Neves</strong> é aceitar um convite para um mundo onde as imagens contam tanto quanto as palavras, e a poesia transborda das páginas. Nascido em Recife, Pernambuco, em 1973, Neves se consolidou como um artista multifacetado, atuando como escritor, ilustrador e arte-educador, e deixando uma marca inconfundível na literatura para a infância.</p>
+                        
+                        <p class="mb-8 text-lg text-neutral-700 leading-relaxed" data-aos="fade-right" data-aos-delay="200">A jornada de André Neves começou em um ambiente familiar que respirava arte. Crescendo entre livros, lápis e tintas, ele desenvolveu desde cedo uma profunda conexão com o universo criativo. Formado em Relações Públicas e Artes Plásticas, iniciou sua carreira ilustrando obras de outros autores, mas logo a necessidade de contar suas próprias histórias se tornou um chamado irresistível.</p>
+                        
+                        <!-- Linha do Tempo com Imagens Reais dos Livros -->
+                        <div class="bg-neutral-50 p-8 rounded-2xl my-10 border border-neutral-100" data-aos="zoom-in" data-aos-delay="400">
+                            <h3 class="font-display font-bold text-2xl mb-8 text-neutral-800 text-center">Trajetória Artística</h3>
+                            <div class="space-y-10">
+
+                                <!-- Item 1 -->
+                                <div class="timeline-item flex items-start" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="flex-shrink-0 mr-6">
+                                        <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
+                                            <img 
+                                                src="https://th.bing.com/th/id/R.89da43f9c4bb700623dfa478879a3b47?rik=9%2bCigkmL9jWiOQ&pid=ImgRaw&r=0" 
+                                                alt="Primeiras ilustrações de André Neves" 
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-sans font-bold text-xl text-neutral-800 mb-2">1998</h4>
+                                        <p class="text-neutral-600">Publica suas primeiras ilustrações em obras de outros autores, marcando o início de sua carreira artística.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 2 -->
+                                <div class="timeline-item flex items-start" data-aos="fade-right" data-aos-delay="400">
+                                    <div class="flex-shrink-0 mr-6">
+                                        <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
+                                            <img 
+                                                src="https://th.bing.com/th/id/OIP.y3YFN6KytqK7N4XHgIyNbgHaHm?w=164&h=180&c=7&r=0&o=7&pid=1.7&rm=3" 
+                                                alt="Capa do livro Lá e Aqui de André Neves" 
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-sans font-bold text-xl text-neutral-800 mb-2">2002</h4>
+                                        <p class="text-neutral-600">Lança <em>Lá e Aqui</em>, seu primeiro livro autoral, destacando-se pela sensibilidade das ilustrações e narrativa poética.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 3 -->
+                                <div class="timeline-item flex items-start" data-aos="fade-right" data-aos-delay="600">
+                                    <div class="flex-shrink-0 mr-6">
+                                        <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
+                                            <img 
+                                                src="https://tse4.mm.bing.net/th/id/OIP.VlXqloFt0JXhpKnEYxZI3AHaJJ?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                                                alt="Capa do livro Obax de André Neves" 
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-sans font-bold text-xl text-neutral-800 mb-2">2010</h4>
+                                        <p class="text-neutral-600">Ganha destaque nacional com <em>Obax</em>, obra premiada e amplamente reconhecida no cenário da literatura infantojuvenil brasileira.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Item 4 -->
+                                <div class="timeline-item flex items-start" data-aos="fade-right" data-aos-delay="800">
+                                    <div class="flex-shrink-0 mr-6">
+                                        <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
+                                            <img 
+                                                src="https://www.sescpr.com.br/wp-content/uploads/2022/07/Lino.jpg" 
+                                                alt="Capa do livro Lino de André Neves" 
+                                                class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-sans font-bold text-xl text-neutral-800 mb-2">2015</h4>
+                                        <p class="text-neutral-600">Alcança reconhecimento internacional com obras traduzidas para diversos idiomas, consolidando sua carreira como autor e ilustrador.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/3">
+                        <div class="bg-gradient-to-br from-primary-50 to-secondary-50 p-7 rounded-2xl shadow-lg hover-lift border border-primary-100" data-aos="fade-left" data-aos-delay="300">
+                            <h3 class="font-sans font-bold text-xl mb-6 text-neutral-800 flex items-center">
+                                <i class="fas fa-user-circle text-primary-500 mr-3 animate-pulse"></i>
+                                Dados Biográficos
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Nascido em Recife, Pernambuco (1973)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-graduation-cap text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Formado em Relações Públicas e Artes Plásticas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-palette text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Escritor, ilustrador e arte-educador</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-trophy text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Vencedor de múltiplos Prêmios Jabuti</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Citação de Destaque -->
+                        <div class="mt-8 bg-gradient-to-r from-primary-600 to-secondary-600 text-white p-7 rounded-2xl shadow-xl relative overflow-hidden" data-aos="flip-up" data-aos-delay="500">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-y-16 translate-x-16"></div>
+                            <div class="text-5xl mb-3 text-primary-200">"</div>
+                            <p class="text-lg italic mb-5 relative z-10 quote-decoration">Sou pura imagem, risco e rabisco. Só sei ser assim. Como se a alma ilustração fosse.</p>
+                            <cite class="not-italic font-sans font-semibold text-primary-200 flex items-center">
+                                <i class="fas fa-pen-nib mr-2"></i> André Neves
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Divider -->
+            <div class="section-divider my-4"></div>
+
+            <!-- Obras -->
+            <section id="obras" class="p-8 sm:p-10 md:p-16">
+                <div class="flex items-center mb-12" data-aos="fade-up">
+                    <div class="h-1 w-16 bg-gradient-to-r from-secondary-500 to-accent-500 rounded-full mr-4"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-neutral-800">Principais Obras: Janelas para a Imaginação</h2>
+                </div>
+                
+                <p class="text-lg mb-10 text-neutral-700 max-w-3xl" data-aos="fade-up" data-aos-delay="200">Com uma vasta produção reconhecida nacional e internacionalmente, André Neves presenteou os leitores com obras que se tornaram clássicos contemporâneos. Seus livros são mais do que histórias; são experiências estéticas e emocionais.</p>
+                
+                <!-- Galeria de Obras com Grid Responsivo -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-12">
+                    <!-- Item 1 - Obax -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift group border border-neutral-100" data-aos="flip-left" data-aos-delay="200">
+                        <div class="h-72 relative overflow-hidden">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.VlXqloFt0JXhpKnEYxZI3AHaJJ?rs=1&pid=ImgDetMain&o=7&rm=3" 
+                                 alt="Capa do livro Obax" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
+                                <div class="p-5 text-white">
+                                    <h3 class="font-sans font-bold text-xl mb-1 text-shadow">Obax</h3>
+                                    <p class="text-sm opacity-90">Uma menina imaginativa e suas aventuras na savana africana</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 text-neutral-800 text-xs font-sans font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                2010
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-amber-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <a href="https://www.amazon.com.br/Obax-Andr%C3%A9-Neves/dp/8574122971" class="text-primary-600 hover:text-primary-700 font-sans font-medium text-sm flex items-center">
+                                    Detalhes <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 - A Caligrafia de Dona Sofia -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift group border border-neutral-100" data-aos="flip-left" data-aos-delay="400">
+                        <div class="h-72 relative overflow-hidden">
+                            <img src="https://th.bing.com/th/id/OIP.N_ZtI8n3td2zi8-GXyn9-wHaKJ?w=202&h=277&c=7&r=0&o=7&pid=1.7&rm=3" 
+                                 alt="Capa do livro A Caligrafia de Dona Sofia" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
+                                <div class="p-5 text-white">
+                                    <h3 class="font-sans font-bold text-xl mb-1 text-shadow">A Caligrafia de Dona Sofia</h3>
+                                    <p class="text-sm opacity-90">Uma história sobre memória, tradição e a beleza da escrita</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 text-neutral-800 text-xs font-sans font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                2007
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-amber-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <a href="https://www.amazon.com.br/s?k=a+caligrafia+de+dona+sofia&adgrpid=1145692063592952&hvadid=71605908379340&hvbmt=be&hvdev=c&hvlocint=138782&hvlocphy=147427&hvnetw=o&hvqmt=e&hvtargid=kwd-71606424255978%3Aloc-20&hydadcr=5729_10697162&mcid=3c5a4240f9603172854198d062322637&tag=msndesktopsta-20&ref=pd_sl_14tuhcufpl_e" class="text-primary-600 hover:text-primary-700 font-sans font-medium text-sm flex items-center">
+                                    Detalhes <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 - Tom -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift group border border-neutral-100" data-aos="flip-left" data-aos-delay="600">
+                        <div class="h-72 relative overflow-hidden">
+                            <img src="https://th.bing.com/th/id/OIP.WEzu33rWCnx2rHXUIz8ZeAHaJB?w=168&h=204&c=7&r=0&o=7&pid=1.7&rm=3" 
+                                 alt="Capa do livro Tom" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
+                                <div class="p-5 text-white">
+                                    <h3 class="font-sans font-bold text-xl mb-1 text-shadow">Tom</h3>
+                                    <p class="text-sm opacity-90">A delicada relação entre um menino e seu avô</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 text-neutral-800 text-xs font-sans font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                2012
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-amber-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <a href="https://www.amazon.com.br/Tom-Andre-Neves/dp/8581440061" class="text-primary-600 hover:text-primary-700 font-sans font-medium text-sm flex items-center">
+                                    Detalhes <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 - Nuno e as Coisas Incríveis -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift group border border-neutral-100" data-aos="flip-left" data-aos-delay="800">
+                        <div class="h-72 relative overflow-hidden">
+                            <img src="https://th.bing.com/th/id/OIP.RgcsgLJy9V-kZLndvNvy2QHaKN?w=126&h=180&c=7&r=0&o=7&pid=1.7&rm=3" 
+                                 alt="Capa do livro Nuno e as Coisas Incríveis" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
+                                <div class="p-5 text-white">
+                                    <h3 class="font-sans font-bold text-xl mb-1 text-shadow">Nuno e as Coisas Incríveis</h3>
+                                    <p class="text-sm opacity-90">As descobertas de um menino curioso sobre o mundo</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-white/90 text-neutral-800 text-xs font-sans font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm">
+                                2016
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center">
+                                <div class="flex text-amber-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <a href="https://www.amazon.com.br/Nuno-Coisas-Incr%C3%ADveis-Andr%C3%A9-Neves/dp/8561695617/ref=sr_1_1?adgrpid=1142393240046021&dib=eyJ2IjoiMSJ9.GGJBIvHEd500-CGgdGffcS52cM_MYsOvNETqQfUBMlzGjHj071QN20LucGBJIEps.43DZVelvcxLjDn-tHILf0dvag22_jLN7_6vhqypJ89U&dib_tag=se&hvadid=71399743810017&hvbmt=be&hvdev=c&hvlocphy=147427&hvnetw=o&hvqmt=e&hvtargid=kwd-71400092300161%3Aloc-20&hydadcr=5657_13210514&keywords=nuno+e+as+coisas+incr%C3%ADveis&mcid=1e2e7238668a352f83de24cd38e6e5f5&qid=1759796194&sr=8-1&ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9" class="text-primary-600 hover:text-primary-700 font-sans font-medium text-sm flex items-center">
+                                    Detalhes <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Estatísticas -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-16">
+                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl font-bold text-primary-600 mb-3 group-hover:scale-110 transition-transform duration-300">30+</div>
+                        <div class="text-neutral-600 font-sans font-medium">Livros Publicados</div>
+                    </div>
+                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl font-bold text-secondary-600 mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
+                        <div class="text-neutral-600 font-sans font-medium">Prêmios Recebidos</div>
+                    </div>
+                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="text-4xl font-bold text-accent-600 mb-3 group-hover:scale-110 transition-transform duration-300">10+</div>
+                        <div class="text-neutral-600 font-sans font-medium">Países com Obras</div>
+                    </div>
+                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="800">
+                        <div class="text-4xl font-bold text-amber-500 mb-3 group-hover:scale-110 transition-transform duration-300">500k+</div>
+                        <div class="text-neutral-600 font-sans font-medium">Leitores Impactados</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Divider -->
+            <div class="section-divider my-4"></div>
+            
+            <!-- Prêmios -->
+            <section id="premios" class="p-8 sm:p-10 md:p-16 bg-gradient-to-r from-primary-50 to-secondary-50">
+                <div class="flex items-center mb-12" data-aos="fade-up">
+                    <div class="h-1 w-16 bg-gradient-to-r from-accent-500 to-primary-500 rounded-full mr-4"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-neutral-800">Reconhecimento e Premiações</h2>
+                </div>
+                
+                <p class="text-lg mb-10 text-neutral-700 max-w-3xl" data-aos="fade-up" data-aos-delay="200">O talento de André Neves foi amplamente celebrado com os mais importantes prêmios literários do país. Ele recebeu múltiplos <strong class="text-primary-600 font-semibold">Prêmios Jabuti</strong>, o Prêmio Açorianos de Melhor Ilustração e o Prêmio Luís Jardim. Muitas de suas obras também receberam o selo "Altamente Recomendável" da Fundação Nacional do Livro Infantil e Juvenil (FNLIJ), atestando sua qualidade e relevância.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-7 rounded-2xl shadow-lg hover-lift border border-neutral-100" data-aos="fade-right" data-aos-delay="300">
+                        <h3 class="font-sans font-bold text-xl mb-5 text-neutral-800 flex items-center">
+                            <i class="fas fa-trophy text-amber-500 mr-3 animate-bounce"></i>
+                            Principais Prêmios
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-award text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Prêmio Jabuti (Ilustração) - 2009, 2013, 2016</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-award text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Prêmio Açorianos de Literatura - 2012</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-award text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Prêmio Luís Jardim - 2010</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-award text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Prêmio FNLIJ - Múltiplas edições</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-7 rounded-2xl shadow-lg hover-lift border border-neutral-100" data-aos="fade-left" data-aos-delay="500">
+                        <h3 class="font-sans font-bold text-xl mb-5 text-neutral-800 flex items-center">
+                            <i class="fas fa-star text-amber-500 mr-3 animate-pulse"></i>
+                            Reconhecimentos Internacionais
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-globe-americas text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Obras traduzidas para espanhol, inglês e francês</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-globe-americas text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Participação em feiras internacionais do livro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-globe-americas text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Exposições de ilustrações no exterior</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-globe-americas text-primary-500 mt-1 mr-4"></i>
+                                <span class="text-neutral-700">Menções honrosas em premiações internacionais</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Divider -->
+            <div class="section-divider my-4"></div>
+            
+            <!-- Legado -->
+            <section id="legado" class="p-8 sm:p-10 md:p-16">
+                <div class="flex items-center mb-12" data-aos="fade-up">
+                    <div class="h-1 w-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mr-4"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display text-neutral-800">Legado e Contribuições</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <p class="text-lg mb-6 text-neutral-700 leading-relaxed" data-aos="fade-right">Mais do que um colecionador de prêmios, André Neves é um apaixonado pela formação de novos leitores. Como arte-educador, ele viaja pelo Brasil ministrando oficinas e palestras, compartilhando seu processo criativo e reforçando a ideia de que o livro é um objeto de afeto e descoberta.</p>
+                        
+                        <p class="text-lg mb-8 text-neutral-700 leading-relaxed" data-aos="fade-right" data-aos-delay="200">Seu legado está na forma como nos ensina a ler o mundo não apenas com os olhos, mas com o coração. Suas obras transcendem a faixa etária infantil, encantando também adultos com sua profundidade e sensibilidade.</p>
+                        
+                        <div class="bg-gradient-to-r from-accent-600 to-green-500 text-white p-7 rounded-2xl shadow-xl mt-8 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="absolute bottom-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full translate-y-10 -translate-x-10"></div>
+                            <h3 class="font-sans font-bold text-xl mb-4 relative z-10">Influência na Literatura Infantil Contemporânea</h3>
+                            <p class="mb-4 relative z-10">André Neves é considerado um dos responsáveis pela renovação da ilustração brasileira para crianças, integrando técnicas tradicionais com inovações estéticas que dialogam com a sensibilidade moderna.</p>
+                            <p class="relative z-10">Seu trabalho inspirou uma nova geração de ilustradores e autores a explorarem a relação entre texto e imagem de forma mais integrada e poética.</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-white p-7 rounded-2xl shadow-lg hover-lift border-l-4 border-primary-500" data-aos="fade-left" data-aos-delay="300">
+                            <h3 class="font-sans font-bold text-xl mb-5 text-neutral-800 flex items-center">
+                                <i class="fas fa-chalkboard-teacher text-primary-500 mr-3 animate-pulse"></i>
+                                Atuação como Arte-Educador
+                            </h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-paint-brush text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Oficinas de criação literária e ilustração</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-book-open text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Palestras sobre formação de leitores</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-users text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Mediação de clubes de leitura infantis</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-pencil-alt text-primary-500 mt-1 mr-4"></i>
+                                    <span class="text-neutral-700">Consultoria para editoras e projetos educacionais</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-secondary-600 to-pink-500 text-white p-7 rounded-2xl shadow-xl mt-8 relative overflow-hidden" data-aos="flip-up" data-aos-delay="500">
+                            <div class="absolute top-0 left-0 w-32 h-32 bg-white opacity-10 rounded-full -translate-x-10 -translate-y-10"></div>
+                            <h3 class="font-sans font-bold text-xl mb-4 relative z-10">O Futuro da Obra de André Neves</h3>
+                            <p class="relative z-10">Com projetos em desenvolvimento e uma produção constante, André Neves continua a expandir seu universo criativo, prometendo novas surpresas para seus leitores de todas as idades. Sua influência na literatura infantojuvenil brasileira permanece em crescimento, inspirando futuras gerações de artistas e leitores.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rodapé do Artigo com Tags -->
+            <footer class="mt-12 pt-10 border-t border-neutral-200 text-center font-sans bg-neutral-50 p-8 sm:p-10 md:p-16">
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="font-bold text-2xl mb-8 text-neutral-800" data-aos="fade-up">Compartilhe este conteúdo</h3>
+                    <div class="flex justify-center space-x-5 mb-10">
+                        <a href="#" class="bg-primary-600 text-white p-4 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-sky-500 text-white p-4 rounded-full hover:bg-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-green-500 text-white p-4 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <p class="text-neutral-600 mb-6 font-medium" data-aos="fade-up">Tags:</p>
+                    <div class="flex flex-wrap justify-center gap-3 mb-10" data-aos="fade-up" data-aos-delay="200">
+                        <span class="bg-primary-100 text-primary-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-primary-200 transition-colors duration-300 cursor-pointer">#AndréNeves</span>
+                        <span class="bg-accent-100 text-accent-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-accent-200 transition-colors duration-300 cursor-pointer">#LiteraturaInfantil</span>
+                        <span class="bg-secondary-100 text-secondary-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-secondary-200 transition-colors duration-300 cursor-pointer">#Ilustração</span>
+                        <span class="bg-amber-100 text-amber-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-amber-200 transition-colors duration-300 cursor-pointer">#Arte</span>
+                        <span class="bg-red-100 text-red-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-red-200 transition-colors duration-300 cursor-pointer">#LivrosInfantis</span>
+                        <span class="bg-indigo-100 text-indigo-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-indigo-200 transition-colors duration-300 cursor-pointer">#CulturaBrasileira</span>
+                    </div>
+                    
+                    <div class="text-neutral-500 font-medium" data-aos="fade-up">
+                        <span>Por <strong class="text-neutral-700">Igor Martins</strong></span> | 
+                        <time datetime="2025-10-06">Publicado em 6 de Outubro de 2025</time>
+                    </div>
+                </div>
+            </footer>
+        
+        </article>
+
+    </div>
+    
+    <!-- Footer do Site -->
+    <footer class="bg-neutral-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div data-aos="fade-right">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-book-open text-primary-600 text-lg"></i>
+                        </div>
+                        <h3 class="font-sans font-bold text-2xl">Literatura Infantojuvenil</h3>
+                    </div>
+                    <p class="text-neutral-400 max-w-md">Um blog dedicado a um dos grandes nomes da literatura infantojuvenil do Brasil, celebrando sua arte e legado através de uma análise aprofundada de sua obra.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-sans font-bold text-xl mb-6">Explore</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#biografia" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-primary-500 mr-2 text-xs"></i> Biografia</a></li>
+                        <li><a href="#obras" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-primary-500 mr-2 text-xs"></i> Obras</a></li>
+                        <li><a href="#premios" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-primary-500 mr-2 text-xs"></i> Prêmios</a></li>
+                        <li><a href="#legado" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center"><i class="fas fa-chevron-right text-primary-500 mr-2 text-xs"></i> Legado</a></li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-delay="400">
+                    <h3 class="font-sans font-bold text-xl mb-6">Autor do Blog:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-user-graduate text-primary-500 mt-1 mr-4"></i>
+                            <span class="text-neutral-400">Igor Gabriel Rodrigues Martins</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-primary-500 mt-1 mr-4"></i>
+                            <span class="text-neutral-400">Estudante SESI-399 / Análise e Desenvolvimento de Sistemas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-neutral-700 mt-12 pt-8 text-center text-neutral-400" data-aos="fade-up">
+                <p>&copy; 2025 Igor Martins. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Inicializar Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ['#0ea5e9', '#7c3aed', '#10b981']
+                },
+                shape: {
+                    type: 'circle',
+                    stroke: {
+                        width: 0,
+                        color: '#000000'
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#0ea5e9',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 140,
+                        line_linked: {
+                            opacity: 0.5
+                        }
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+        
+        // Inicializar Typed.js
+        document.addEventListener('DOMContentLoaded', function() {
+            var typed = new Typed('#typed-text', {
+                strings: ['André Neves: ^1000 Poesia Visual^500 na Literatura Infantil'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                startDelay: 500,
+                loop: false,
+                showCursor: true,
+                cursorChar: '|'
+            });
+        });
+        
+        // Animação GSAP para elementos
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Animação para elementos com a classe fade-in-element
+        gsap.utils.toArray('.fade-in-element').forEach(element => {
+            gsap.fromTo(element, {
+                opacity: 0,
+                y: 20
+            }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+        
+        // Animação para estatísticas
+        gsap.utils.toArray('.stat-card').forEach(card => {
+            gsap.fromTo(card, {
+                scale: 0.8,
+                opacity: 0
+            }, {
+                scale: 1,
+                opacity: 1,
+                duration: 0.5,
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse'
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
