@@ -33,6 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <script src="tailwind.js"></script>
+    <script src="src/responsive.js"></script>
     
     <link rel="stylesheet" href="css/style.css">
 
@@ -71,9 +72,18 @@
                     </a>
                 </nav>
                 
-                <button class="md:hidden text-white">
+                <button id="mobile-menu-btn" class="md:hidden text-white">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
+
+                <!-- Adicione logo depois do <nav> hidden md:flex -->
+                <nav id="mobile-menu" class="hidden md:hidden flex-col space-y-4 pb-4">
+                    <a href="#biografia" class="hover:text-accent-300 font-medium">Biografia</a>
+                    <a href="#obras" class="hover:text-accent-300 font-medium">Obras</a>
+                    <a href="#premios" class="hover:text-accent-300 font-medium">Prêmios</a>
+                    <a href="#legado" class="hover:text-accent-300 font-medium">Legado</a>
+                </nav>            
+                
             </div>
         </div>
     </header>
@@ -154,7 +164,7 @@
 
                                 <!-- Item 1 -->
                                 <div class="timeline-item flex items-start" data-aos="fade-right" data-aos-delay="200">
-                                    <div class="flex-shrink-0 mr-6">
+                                    <div class="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
                                         <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
                                             <img 
                                                 src="http://revistacontinente.com.br/public/uploads/data/files/Edicao_136/portfolio/bologna_fnlij.jpg" 
@@ -278,7 +288,7 @@
                             <img src="https://tse4.mm.bing.net/th/id/OIP.VlXqloFt0JXhpKnEYxZI3AHaJJ?rs=1&pid=ImgDetMain&o=7&rm=3" 
                                  alt="Capa do livro Obax" 
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
+                            <div class="static md:absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent flex items-end">
                                 <div class="p-5 text-white">
                                     <h3 class="font-sans font-bold text-xl mb-1 text-shadow">Obax</h3>
                                     <p class="text-sm opacity-90">Uma menina imaginativa e suas aventuras na savana africana</p>
