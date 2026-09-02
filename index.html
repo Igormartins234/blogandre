@@ -7,7 +7,7 @@
     <meta name="keywords" content="André Neves, Literatura Infantil, Ilustração, Livros Infantis, Autor Brasileiro, Obax, Tom, A Caligrafia de Dona Sofia">
     <title>André Neves: A Poesia em Cores e Palavras na Literatura Infantil</title>
     
-    <!-- Inclusão do Tailwind CSS via CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
@@ -18,257 +18,30 @@
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Biblioteca AOS (Animate On Scroll) -->
+    <!-- Biblioteca AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <!-- Biblioteca Typed.js para efeitos de digitação -->
+    <!-- Biblioteca Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     
-    <!-- Biblioteca Particles.js para efeito de partículas -->
+    <!-- Biblioteca Particles.js  -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
-    <!-- Biblioteca GSAP para animações avançadas -->
+    <!-- Biblioteca GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <!-- Configuração customizada do Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                        'serif': ['Crimson Text', 'Georgia', 'serif'],
-                        'display': ['Playfair Display', 'Georgia', 'serif'],
-                    },
-                    colors: {
-                        'primary': {
-                            '50': '#f0f9ff',
-                            '100': '#e0f2fe',
-                            '200': '#bae6fd',
-                            '300': '#7dd3fc',
-                            '400': '#38bdf8',
-                            '500': '#0ea5e9',
-                            '600': '#0284c7',
-                            '700': '#0369a1',
-                            '800': '#075985',
-                            '900': '#0c4a6e',
-                        },
-                        'secondary': {
-                            '50': '#faf5ff',
-                            '100': '#f3e8ff',
-                            '200': '#e9d5ff',
-                            '300': '#d8b4fe',
-                            '400': '#c084fc',
-                            '500': '#a855f7',
-                            '600': '#9333ea',
-                            '700': '#7c3aed',
-                            '800': '#6b21a8',
-                            '900': '#581c87',
-                        },
-                        'accent': {
-                            '50': '#ecfdf5',
-                            '100': '#d1fae5',
-                            '200': '#a7f3d0',
-                            '300': '#6ee7b7',
-                            '400': '#34d399',
-                            '500': '#10b981',
-                            '600': '#059669',
-                            '700': '#047857',
-                            '800': '#065f46',
-                            '900': '#064e3b',
-                        },
-                        'neutral': {
-                            '50': '#fafafa',
-                            '100': '#f5f5f5',
-                            '200': '#e5e5e5',
-                            '300': '#d4d4d4',
-                            '400': '#a3a3a3',
-                            '500': '#737373',
-                            '600': '#525252',
-                            '700': '#404040',
-                            '800': '#262626',
-                            '900': '#171717',
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-in-out',
-                        'slide-up': 'slideUp 0.6s ease-out',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'bounce-slow': 'bounce 3s infinite',
-                        'spin-slow': 'spin 3s linear infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tailwind.js"></script>
     
-    <style>
-        /* Efeito de partículas */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);
-        }
-        
-        .hero-gradient {
-            background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
-        }
-        
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
-        }
-        
-        .book-cover {
-            transition: transform 0.5s ease;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.2);
-        }
-        
-        .book-cover:hover {
-            transform: rotateY(5deg) scale(1.03);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 2.5rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%);
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #e0f2fe;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 2rem;
-            bottom: -1rem;
-            width: 2px;
-            background: linear-gradient(to bottom, #e0f2fe, #f3e8ff);
-        }
-        
-        .timeline-item:last-child::after {
-            display: none;
-        }
-        
-        .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #d4d4d4, transparent);
-        }
-        
-        .stat-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #f1f5f9;
-        }
-        
-        .quote-decoration {
-            position: relative;
-        }
-        
-        .quote-decoration::before {
-            content: """;
-            position: absolute;
-            top: -20px;
-            left: -10px;
-            font-size: 5rem;
-            color: #e0f2fe;
-            font-family: Georgia, serif;
-            z-index: 0;
-        }
-        
-        /* Efeito de brilho nos botões */
-        .glow-on-hover {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .glow-on-hover::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: 0.5s;
-        }
-        
-        .glow-on-hover:hover::before {
-            left: 100%;
-        }
-        
-        /* Animação de entrada para elementos */
-        .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .fade-in-element.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Efeito parallax */
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body class="bg-neutral-50 font-serif text-neutral-700 leading-relaxed antialiased">
 
-    <!-- Header/Navegação -->
+
     <header class="sticky top-0 z-50 gradient-bg text-neutral-800 shadow-lg glass-effect" data-aos="fade-down">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center py-4">
@@ -305,7 +78,7 @@
         </div>
     </header>
 
-    <!-- Hero Section com partículas -->
+
     <section class="relative py-20 md:py-28 hero-gradient overflow-hidden">
         <div id="particles-js"></div>
         <div class="absolute inset-0 opacity-20">
@@ -356,7 +129,7 @@
         </div>
     </section>
 
-    <!-- Container Principal do Conteúdo -->
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         
         <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -374,7 +147,7 @@
                         
                         <p class="mb-8 text-lg text-neutral-700 leading-relaxed" data-aos="fade-right" data-aos-delay="200">A jornada de André Neves começou em um ambiente familiar que respirava arte. Crescendo entre livros, lápis e tintas, ele desenvolveu desde cedo uma profunda conexão com o universo criativo. Formado em Relações Públicas e Artes Plásticas, iniciou sua carreira ilustrando obras de outros autores, mas logo a necessidade de contar suas próprias histórias se tornou um chamado irresistível.</p>
                         
-                        <!-- Linha do Tempo com Imagens Reais dos Livros -->
+                        <!-- Linha do Tempo -->
                         <div class="bg-neutral-50 p-8 rounded-2xl my-10 border border-neutral-100" data-aos="zoom-in" data-aos-delay="400">
                             <h3 class="font-display font-bold text-2xl mb-8 text-neutral-800 text-center">Trajetória Artística</h3>
                             <div class="space-y-10">
@@ -384,7 +157,7 @@
                                     <div class="flex-shrink-0 mr-6">
                                         <div class="w-24 h-32 rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 book-cover">
                                             <img 
-                                                src="https://th.bing.com/th/id/R.89da43f9c4bb700623dfa478879a3b47?rik=9%2bCigkmL9jWiOQ&pid=ImgRaw&r=0" 
+                                                src="http://revistacontinente.com.br/public/uploads/data/files/Edicao_136/portfolio/bologna_fnlij.jpg" 
                                                 alt="Primeiras ilustrações de André Neves" 
                                                 class="w-full h-full object-cover">
                                         </div>
@@ -486,7 +259,6 @@
                 </div>
             </section>
             
-            <!-- Divider -->
             <div class="section-divider my-4"></div>
 
             <!-- Obras -->
@@ -498,7 +270,7 @@
                 
                 <p class="text-lg mb-10 text-neutral-700 max-w-3xl" data-aos="fade-up" data-aos-delay="200">Com uma vasta produção reconhecida nacional e internacionalmente, André Neves presenteou os leitores com obras que se tornaram clássicos contemporâneos. Seus livros são mais do que histórias; são experiências estéticas e emocionais.</p>
                 
-                <!-- Galeria de Obras com Grid Responsivo -->
+                <!-- Galeria de Obras -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-12">
                     <!-- Item 1 - Obax -->
                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-lift group border border-neutral-100" data-aos="flip-left" data-aos-delay="200">
@@ -628,29 +400,9 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Estatísticas -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-16">
-                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="text-4xl font-bold text-primary-600 mb-3 group-hover:scale-110 transition-transform duration-300">30+</div>
-                        <div class="text-neutral-600 font-sans font-medium">Livros Publicados</div>
-                    </div>
-                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="text-4xl font-bold text-secondary-600 mb-3 group-hover:scale-110 transition-transform duration-300">15+</div>
-                        <div class="text-neutral-600 font-sans font-medium">Prêmios Recebidos</div>
-                    </div>
-                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="text-4xl font-bold text-accent-600 mb-3 group-hover:scale-110 transition-transform duration-300">10+</div>
-                        <div class="text-neutral-600 font-sans font-medium">Países com Obras</div>
-                    </div>
-                    <div class="stat-card p-7 rounded-2xl text-center hover-lift group" data-aos="zoom-in" data-aos-delay="800">
-                        <div class="text-4xl font-bold text-amber-500 mb-3 group-hover:scale-110 transition-transform duration-300">500k+</div>
-                        <div class="text-neutral-600 font-sans font-medium">Leitores Impactados</div>
-                    </div>
-                </div>
+
             </section>
             
-            <!-- Divider -->
             <div class="section-divider my-4"></div>
             
             <!-- Prêmios -->
@@ -715,7 +467,6 @@
                 </div>
             </section>
             
-            <!-- Divider -->
             <div class="section-divider my-4"></div>
             
             <!-- Legado -->
@@ -774,38 +525,12 @@
                 </div>
             </section>
 
-            <!-- Rodapé do Artigo com Tags -->
+            <!-- Footer -->
             <footer class="mt-12 pt-10 border-t border-neutral-200 text-center font-sans bg-neutral-50 p-8 sm:p-10 md:p-16">
                 <div class="max-w-2xl mx-auto">
-                    <h3 class="font-bold text-2xl mb-8 text-neutral-800" data-aos="fade-up">Compartilhe este conteúdo</h3>
-                    <div class="flex justify-center space-x-5 mb-10">
-                        <a href="#" class="bg-primary-600 text-white p-4 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="100">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="bg-sky-500 text-white p-4 rounded-full hover:bg-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="200">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="bg-green-500 text-white p-4 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-110" data-aos="zoom-in" data-aos-delay="400">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                    
-                    <p class="text-neutral-600 mb-6 font-medium" data-aos="fade-up">Tags:</p>
-                    <div class="flex flex-wrap justify-center gap-3 mb-10" data-aos="fade-up" data-aos-delay="200">
-                        <span class="bg-primary-100 text-primary-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-primary-200 transition-colors duration-300 cursor-pointer">#AndréNeves</span>
-                        <span class="bg-accent-100 text-accent-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-accent-200 transition-colors duration-300 cursor-pointer">#LiteraturaInfantil</span>
-                        <span class="bg-secondary-100 text-secondary-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-secondary-200 transition-colors duration-300 cursor-pointer">#Ilustração</span>
-                        <span class="bg-amber-100 text-amber-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-amber-200 transition-colors duration-300 cursor-pointer">#Arte</span>
-                        <span class="bg-red-100 text-red-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-red-200 transition-colors duration-300 cursor-pointer">#LivrosInfantis</span>
-                        <span class="bg-indigo-100 text-indigo-700 text-sm font-semibold px-3 py-2 rounded-full hover:bg-indigo-200 transition-colors duration-300 cursor-pointer">#CulturaBrasileira</span>
-                    </div>
-                    
                     <div class="text-neutral-500 font-medium" data-aos="fade-up">
                         <span>Por <strong class="text-neutral-700">Igor Martins</strong></span> | 
-                        <time datetime="2025-10-06">Publicado em 6 de Outubro de 2025</time>
+                        <time datetime="2025-10-06">Publicado em 1 de Setembro de 2026</time>
                     </div>
                 </div>
             </footer>
@@ -814,7 +539,6 @@
 
     </div>
     
-    <!-- Footer do Site -->
     <footer class="bg-neutral-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -845,170 +569,15 @@
                             <i class="fas fa-user-graduate text-primary-500 mt-1 mr-4"></i>
                             <span class="text-neutral-400">Igor Gabriel Rodrigues Martins</span>
                         </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-envelope text-primary-500 mt-1 mr-4"></i>
-                            <span class="text-neutral-400">Estudante SESI-399 / Análise e Desenvolvimento de Sistemas</span>
-                        </li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-neutral-700 mt-12 pt-8 text-center text-neutral-400" data-aos="fade-up">
-                <p>&copy; 2025 Igor Martins. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Igor Martins. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Inicializar AOS (Animate On Scroll)
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-        
-        // Inicializar Particles.js
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: ['#0ea5e9', '#7c3aed', '#10b981']
-                },
-                shape: {
-                    type: 'circle',
-                    stroke: {
-                        width: 0,
-                        color: '#000000'
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 2,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#0ea5e9',
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: 'none',
-                    random: true,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'grab'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 0.5
-                        }
-                    },
-                    push: {
-                        particles_nb: 4
-                    }
-                }
-            },
-            retina_detect: true
-        });
-        
-        // Inicializar Typed.js
-        document.addEventListener('DOMContentLoaded', function() {
-            var typed = new Typed('#typed-text', {
-                strings: ['André Neves: ^1000 Poesia Visual^500 na Literatura Infantil'],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 2000,
-                startDelay: 500,
-                loop: false,
-                showCursor: true,
-                cursorChar: '|'
-            });
-        });
-        
-        // Animação GSAP para elementos
-        gsap.registerPlugin(ScrollTrigger);
-        
-        // Animação para elementos com a classe fade-in-element
-        gsap.utils.toArray('.fade-in-element').forEach(element => {
-            gsap.fromTo(element, {
-                opacity: 0,
-                y: 20
-            }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
-        
-        // Animação para estatísticas
-        gsap.utils.toArray('.stat-card').forEach(card => {
-            gsap.fromTo(card, {
-                scale: 0.8,
-                opacity: 0
-            }, {
-                scale: 1,
-                opacity: 1,
-                duration: 0.5,
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 80%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
-    </script>
-
+    <script src="animation.js"></script>
 </body>
 </html>
