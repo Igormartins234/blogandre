@@ -1,9 +1,3 @@
-AOS.init({
-    duration: 800,
-    once: true,
-    offset: 100
-});
-
 particlesJS('particles-js', {
     particles: {
         number: {
